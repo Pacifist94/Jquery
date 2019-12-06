@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title></title>
+
+	<link href="js/jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src = "js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+
+<body>
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
+	<style type="text/css">
+		/*
+		.class{};
+		#id{};
+		tag{};
+		*/
+
+		.big {
+		font-size: 20px;
+
+		}
+
+		#green{
+
+		}
+
+		.ui-menu { width: 150px; }
+	</style>
+
+
+	<button id="green" class ="big">Button 1</button>
+
+	<div>
+		<input id="autocomplete" title="type &quot;a&quot;">
+	</div>
+
+
+
+<ul id="menu">
+  <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+  <li><div>Books</div></li>
+  <li><div>Clothing</div></li>
+  <li><div>Electronics ►</div>
+    <ul>
+      <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+      <li><div>Car Hifi</div></li>
+      <li><div>Utilities</div></li>
+    </ul>
+  </li>
+  <li><div>Movies</div></li>
+  <li><div>Music</div>
+    <ul>
+      <li><div>Rock</div>
+        <ul>
+          <li><div>Alternative</div></li>
+          <li><div>Classic</div></li>
+        </ul>
+      </li>
+      <li><div>Jazz</div>
+        <ul>
+          <li><div>Freejazz</div></li>
+          <li><div>Big Band</div></li>
+          <li><div>Modern</div></li>
+        </ul>
+      </li>
+      <li><div>Pop</div></li>
+    </ul>
+  </li>
+  <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+</ul>
+ 
+
+
+<!--  ------------------------------------------  -->
+	<script type="text/javascript">
+
+$( function() {
+    $( "#menu" ).menu();
+  } );
+
+
+		$("#green").hide(2000);
+
+		var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"C++",
+			"Clojure",
+			"COBOL",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+		];
+
+		$( "#autocomplete" ).autocomplete({
+			source: availableTags
+		});
+	</script>
+
+</body>
+</html>
